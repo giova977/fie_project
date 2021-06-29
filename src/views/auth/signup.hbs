@@ -1,0 +1,48 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3>Registrate</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/signup" method="post">
+                        <div class="form-group">
+                            <select class="form-control" name="selectTipoPersona" id="selectTipoPersona">
+                                <option value="NATURAL">Natural</option>
+                                <option value="JURIDICA">Juridica</option>
+                            </select>
+                        </div>                        
+                        <div class="form-group">
+                            <input type="text" name="RazonSocial" id="razonSocial" placeholder="Razon Social" class="form-control" style="visibility: hidden; display:none">
+                        </div>
+                        <div id="tipoPersonaNaturalBlock">
+                            <div class="form-group">
+                                <input type="text" name="Nombres" id="nombres" placeholder="Nombres" class="form-control tipoPersonaNatural">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="ApellidoPaterno" id="apellidoPaterno" placeholder="Apellido Paterno" class="form-control tipoPersonaNatural">
+                            </div>                                                
+                            <div class="form-group">
+                                <input type="text" name="ApellidoMaterno" id="apellidoMaterno" placeholder="Apellido Materno" class="form-control tipoPersonaNatural">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="NroDocumento" id="nroDocumento" placeholder="DNI" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="Contraseña" id="contraseña" placeholder="Contraseña" class="form-control">
+                        </div>     
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Registrate
+                            </button>
+                        </div>                                                 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/signup.js"></script>

@@ -1,0 +1,125 @@
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body p-4">
+                    <form id="form" action="/cartera/add" method="POST">
+                        
+                        <div class="entradaBase">
+                            <div class="form-group p-1">
+                                <label class="p-1" for="selectTipoCartera">Tipo cartera</label>
+                                <select class="form-control" name="selectTipoCartera" id="selectTipoCartera">
+                                    <option value="FACTURA">Factura</option>
+                                    <option value="LETRA">Letra</option>
+                                    <option value="RECIBO">Recibo</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group p-1">
+                                <label class="p-1" for="selectTipoTasa">Tipo tasa</label>
+                                <select class="form-control" name="selectTipoTasa" id="selectTipoTasa">
+                                    <option default selected value="EFECTIVA">Efectiva</option>
+                                    <option value="NOMINAL">Nominal</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group p-1">
+                                <label class="p-1" for="selectTipoMoneda">Tipo moneda</label>
+                                <select class="form-control" name="selectTipoMoneda" id="selectTipoMoneda">
+                                    <option value="SOLES">Soles</option>
+                                    <option value="DOLARES">Dolares</option>
+                                </select>
+                            </div>                        
+                        </div>
+                        
+                        <br>
+
+                        <div class="entradaBase">
+                            <div class="form-group p-1">
+                                <label class="p-1" for="inpFechaEmision">Fecha de emisión</label>
+                                <input type="date" class="form-control" name="inpFechaEmision" id="inpFechaEmision">
+                            </div>
+                            
+                            <div class="form-group p-1">
+                                <label class="p-1" for="inpPlazoDias">Plazo de dias</label>
+                                <input type="number" class="form-control" name="inpPlazoDias" id="inpPlazoDias">
+                            </div>
+                        </div>
+
+                        <br>
+                        
+                        <div class="entradaBase">
+                            <div class="form-group p-1">
+                                <label class="p-1" for="selectTipoPlazoTasa">Plazo tasa</label>
+                                <select class="form-control" name="selectTipoPlazoTasa" id="selectTipoPlazoTasa">
+                                    <option value="DIARIO">Diario</option>
+                                    <option value="QUINCENAL">Quincenal</option>
+                                    <option value="MENSUAL">Mensual</option>
+                                    <option value="BIMESTRAL">Bimestral</option>
+                                    <option value="TRIMESTRAL">Trimestral</option>
+                                    <option value="CUATRIMESTRAL">Cuatrimestral</option>
+                                    <option value="SEMESTRAL">Semestral</option>
+                                    <option value="ANUAL">Anual</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group p-1">
+                                <label class="p-1" for="inpValorTasa">Valor de la tasa</label>
+                                <input type="text" class="form-control" name="inpValorTasa" id="inpValorTasa">
+                            </div>
+                            
+                            <div id="divPeriodoCap" class="form-group p-1" style="display: none; visibility: hidden;">
+                                <label class="p-1" for="selectPeriodoCapitalizacion">Periodo de capitalizacion</label>
+                                <select class="form-control" name="selectPeriodoCapitalizacion" id="selectPeriodoCapitalizacion">
+                                    <option value="DIARIO">Diario</option>
+                                    <option value="QUINCENAL">Quincenal</option>
+                                    <option value="MENSUAL">Mensual</option>
+                                    <option value="BIMESTRAL">Bimestral</option>
+                                    <option value="TRIMESTRAL">Trimestral</option>
+                                    <option value="CUATRIMESTRAL">Cuatrimestral</option>
+                                    <option value="SEMESTRAL">Semestral</option>
+                                    <option value="ANUAL">Anual</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <br>
+
+                        <div class="entradaBase">
+                            <div class="form-group p-1">
+                                <label class="p-1" for="inpValorNominal">Valor nominal</label>
+                                <input type="text" class="form-control" name="inpValorNominal" id="inpValorNominal">
+                            </div>
+                            
+                            <div class="form-group p-1">
+                                <label class="p-1" for="inpRetencion">Retencion</label>
+                                <input type="text" class="form-control" name="inpRetencion" id="inpRetencion">
+                            </div>
+                            
+                            <div class="form-group p-1">
+                                <label class="p-1" for="inpCGI">Costos y gastos iniciales</label>
+                                <input type="text" class="form-control" name="inpCGI" id="inpCGI">
+                            </div>
+                            
+                            <div class="form-group p-1">
+                                <label class="p-1" for="inpCGF">Costos y gastos finales</label>
+                                <input type="text" class="form-control" name="inpCGF" id="inpCGF">
+                            </div>
+                        </div>
+                        
+                        <br>
+
+                        <div class="form-group p-1">
+                            <button id="btnGuardar" class="form-control btn btn-success btn-block" type="submit">
+                                Guardar
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/add.js"></script>

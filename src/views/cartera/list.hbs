@@ -1,0 +1,48 @@
+<div class="container p-2">
+    <div class="row">
+        {{#each carteras}}
+            <div class="col-md-6 p-3">
+                <div id="cardCartera" class="card text-center">
+                    <div class="card-body">
+                        <p style="text-transform: uppercase; color: #9F5565; font-size: 35px; font-family: 'Raleway', sans-serif; font-weight: bolder;">{{TipoCartera}}</p>
+                        <br>
+                        <p>
+                            <span class="textMin" style="font-size: 20px;">TASA {{TipoTasa}} - </span>
+                            <span class="textMin" style="font-size: 20px;">{{TipoMoneda}}</span>
+                        </p>
+                        <hr>
+                        <p class="textMin">Fecha Emision: {{FechaEmision}}</p>
+                        <p class="textMin">Fecha Pago: {{FechaPago}}</p>
+                        <hr>
+                        <p class="textMin">Valor Nominal: {{ValorNominal}}</p>                    
+                        <p class="textMin">Costos y Gastos Iniciales: {{CostoInicialTotal}}</p>                    
+                        <p class="textMin">Costos y Gastos Finales: {{CostoFinalTotal}}</p>                    
+                        <hr>
+                        <p class="textMin">Plazo de Tasa: {{TipoPlazoTasa}}</p>                    
+                        <p class="textMin">Valor de Tasa: {{ValorTasa}} %</p>                    
+                        <p class="textMin">Periodo de Capitalizacion: {{PeriodoCapitalizacion}}</p>                    
+                        <hr>
+                        <p class="textMin">Retencion: {{Retencion}}</p>
+                        <p class="textMin">Costos y gastos iniciales: {{CostoInicialTotal}}</p>
+                        <p class="textMin">Costos y gastos finales: {{CostoFinalTotal}}</p>
+                        <hr>
+                        <p class="textMin">Descuento: {{Descuento}}</p>
+                        <p class="textMin">Valor Neto: {{ValorNeto}}</p>                    
+                        <p class="textMin">Valor Recibido: {{ValorRecibido}}</p>                    
+                        <p class="textMin">Valor Entregado: {{ValorEntregado}}</p>                    
+                        <p class="textMin">TCEA: {{TCEA}} %</p>
+                        <br>
+                        <a href="/cartera/delete/{{IDCartera}}" class="btn btn-danger btn-block form-control">Eliminar</a>                
+                    </div>
+                </div>
+            </div>
+        {{else}}
+        <div class="col-md-5 mx-auto">
+            <div class="card card-body text-center">
+                <p>No se ha calculado ningun descuento aun</p>
+                <a href="/cartera/add">Crea uno</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

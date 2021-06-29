@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #A70124;">
+  <div class="container">
+    <a class="navbar-brand" href="/" style="color: white; font-family: 'Raleway', sans-serif; font-weight: bold; font-size: 30px;">
+        Descuento APP
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a style="color: #FFFF;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Carteras
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/cartera">Mis carteras</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/cartera/add">Agregar cartera</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a style="color: #FFFF;" href="/profile" class="nav-link">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #FFFF;" href="/logout" class="nav-link">Cerrar Sesion</a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a style="color: #FFFF;" href="/signin" class="nav-link">Iniciar Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: #FFFF;" href="/signup" class="nav-link">Registrarse</a>
+          </li>          
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
